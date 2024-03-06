@@ -31,12 +31,13 @@ pyautogui.sleep(3)
 pyautogui.click(x=446, y=384)
 pyautogui.write("emaildeteste@gmail.com") # Preencher o campo de email (to usando email ficticio)
 pyautogui.press("tab") # Para ele pular para o campo da senha.
-pyautogui.write('colocara a senha aqui') # Escrever a senha do usuário.
+pyautogui.write('colocar a senha aqui') # Escrever a senha do usuário.
 # Clicar em logar
 pyautogui.click(x=697, y=543)
 time.sleep(3)
 
 # Passo 3: Importar a base de dados. (Ferramenta: Pandas - pip install pandas numpy openpyx1)
+
 import pandas as pd
 
 
@@ -48,26 +49,25 @@ print(tabela)
 # para cada linha da minha tabela
 for linha in tabela.index:
     # clicar no 1º campo
-    pyautogui.click(X=414, y=276)
+    pyautogui.click(x=417, y=276)
     # Código do Produto
     codigo = tabela.loc[linha, "codigo"]
     # preencher o campo
     pyautogui.write(str(codigo))
-     # passar para o proximo campo
     pyautogui.press("tab")
-    # Marca do Produto
+    # Marca 
     pyautogui.write(str(tabela.loc[linha, "marca"]))
     pyautogui.press("tab")
-    # Tipo de Produto
+    # Tipo 
     pyautogui.write(str(tabela.loc[linha, "tipo"]))
     pyautogui.press("tab")
-    # Categoria do Produto
+    # Categoria 
     pyautogui.write(str(tabela.loc[linha, "categoria"]))
     pyautogui.press("tab")
-    # Preço Unitário do Produto
+    # Preço 
     pyautogui.write(str(tabela.loc [linha, "preco_unitario"]))
     pyautogui.press("tab")
-    # Custo do Produto
+    # Custo 
     pyautogui.write(str(tabela.loc [linha, "custo"]))
     pyautogui.press("tab")
     # OBS
